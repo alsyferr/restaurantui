@@ -4,9 +4,14 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_USER: myuser
+      POSTGRES_USER: syferr
       POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydb
+      POSTGRES_DB: restaurant_db
     ports:
       - 5432:5432
+    networks:
+      - restaurant_network
 
+networks:
+  restaurant_network:
+    driver: bridge
