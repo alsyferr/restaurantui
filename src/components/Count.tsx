@@ -20,7 +20,7 @@ import React, { useState, useEffect } from "react";
 
 const Count = () => {
   
-  let difference = +new Date(`04/14/2024`) - +new Date();
+  let difference = +new Date(`05/20/2024`) - +new Date();
   const [delay, setDelay] = useState(difference);
 
   const d = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -42,10 +42,14 @@ const Count = () => {
     };
   });
   return (
+    <>
     <span className="font-bold text-5xl text-yellow-300">
       {d}:{h}:{m}:{s}
     </span>
+    
+    </>
   );
 };
 
 export default Count;
+

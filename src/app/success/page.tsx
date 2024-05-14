@@ -12,7 +12,7 @@ const SuccesPage = () => {
   useEffect(() => {
     const makeRequest = async() => {
       try {
-        await fetch(`http://localhost:3000/api/confirm/${payment_intent}`, {
+        await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/confirm/${payment_intent}`, {
           method: "PUT",
         });
         router.push("/orders")
